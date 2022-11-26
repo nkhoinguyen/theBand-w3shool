@@ -1,0 +1,588 @@
+/* font gg */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all 0.3 linear;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+.theBand, .tour-dates, .contact, .blog{
+    margin: 0 260px;
+}
+section .tilte{
+    letter-spacing: 10px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 24px;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+.bar-nav{
+    
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: #2d2d30;
+    color: #d5d5d5;
+    box-shadow: 0px 1px 10px #333;
+    opacity: 0.9;
+    
+}
+.bar-nav>i{
+    position: absolute;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 5px;
+    top: 6px;
+    right: 0.5rem;
+    display: none;
+    cursor: pointer;
+}
+.bar-nav>i:hover{
+    background-color: #666;
+}
+.bar-nav a{
+    color: #d5d5d5;
+}
+.logo-band{
+    padding: 15px 15px;
+    letter-spacing: 4px;
+    font-weight: 500;
+}
+.nav-link .menu-nav{
+    display: flex;
+    
+}
+.nav-link .menu-nav>li{
+    text-transform: uppercase;
+    padding: 15px 15px;
+    letter-spacing: 4px;
+    line-height: 20px;
+    cursor: pointer;
+    font-size: 12px;
+}
+.nav-link .menu-nav>li:hover>a{
+    color: #fff;
+}
+.nav-link .menu-nav li>a{
+    /* color: #d5d5d5; */
+    font-size: 12px;
+}
+.nav-link .menu-nav li.active,.nav-link .menu-nav li.active>a {
+    color: #fff;
+    background-color: #29292c;
+}
+.dropdown-nav>li{
+    padding:3px 20px;
+    margin: 5px 0;
+}
+.dropdown-nav>li:hover{
+    background-color: red;
+}
+.dropdown-nav>li>a{
+    color: #2d2d30;
+}
+.dropdown{
+    position: relative;
+}
+.dropdown-nav{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #fff;
+    z-index: 1;
+}
+.dropdown.open{
+    background-color: #555;
+}
+.dropdown.open .dropdown-nav{
+    display: block;
+}
+.dropdown .dropdown-nav{
+    display: none;
+}
+.nav-link .menu-nav>i{
+    padding: 15px 15px;
+    font-size: 12px;
+    line-height: 20px;
+    cursor: pointer;
+}
+section .swiper img{
+    width: 100%;
+    height: auto;
+}
+.swiper-button-next:after, .swiper-button-prev:after{
+    color: #fff;
+}
+.swiper-button-next:after{
+    margin-right: 100px;
+}
+.swiper-button-prev:after{
+    margin-left: 100px;
+}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+    bottom: 30px !important;
+}
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+    border: 1px solid #fff;
+    background-color: transparent;
+    padding: 4px;
+}
+.swiper-pagination-bullet-active{
+    background-color: #fff !important;
+}
+.img{
+    position: relative;
+}
+.caption{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 82%;
+    margin: auto;
+}
+.caption h3{
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.theBand{
+    text-align: center;
+    padding: 80px 0;
+
+}
+
+.theBand p{
+    margin-bottom: 10px;
+    color: #777;
+}
+.persons{
+    padding: 15px 0;    
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+.person{
+    flex-grow: 1;
+    margin: 20px;
+}
+.person .img-person{
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+.person .img-person img{
+    width: 90%;
+    border-radius: 50%;
+    border: 10px solid transparent;
+    opacity: .7;
+}
+.person .img-person img:hover{
+    border: 10px solid #f1f1f1;
+}
+.person .dropdown-desc{
+    /* display: none; */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+.person.show .dropdown-desc{
+    /* display: block; */
+}
+.tour-dates{
+    text-align: center;
+    padding: 80px 0;
+}
+.tour-dates>p{
+    padding-bottom: 10px;
+}
+.tour-dates .dates{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: baseline;
+    text-align: start;
+    margin: 20px 0;
+    background: #fff;
+}
+.tour-dates .dates .month{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    width: 100%;
+    padding: 15px 15px;
+    border-bottom: 1px solid #ddd;
+}
+.tour-dates .dates .month .sold-out{
+    font-size: 12px;
+    padding: 3px 5px;
+    background: #d9534f;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 2px;
+}
+.tour-dates .dates .month .tickets-left{
+    padding: 2px 6px;
+    border-radius: 20px;
+    background-color: #777;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+}
+.tour-dates .locations{
+    display: flex;
+    gap: 25px;
+}
+.tour-dates .locations .city{
+    background: #fff;
+    box-shadow: 2px 2px 8px 1px #222;
+}
+.tour-dates .locations .city .img-city img{
+    width: 100%;
+}
+.tour-dates .locations .city .name-city{
+    color: #777;
+    font-weight: 700;
+    margin: 15px 0;
+}
+.tour-dates .locations .city .day{
+    color: #777;
+    font-size: 16px;
+}
+.tour-dates .locations .city button{
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    background-color: #333;
+    font-weight: 400;
+    font-size: 14px;
+    color: #f1f1f1;
+    margin: 10px 0;
+    border: 1px solid transparent;
+    transition: .3s;
+    cursor: pointer;
+}
+.tour-dates .locations .city button:hover{
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+}
+.bg-1{
+    background-color: #2d2d30;
+    color: #bdbdbd;
+}
+.contact{
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.contact p{
+    padding-bottom: 10px;
+    color: #777;
+}
+.contact .contact-box .phone{
+    text-align: start;
+    line-height: 2;
+}
+.contact .contact-box .phone p>i{
+    padding-right: 5px;
+}
+
+.contact .contact-box{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    gap: 15px;
+}
+.contact .contact-box form{
+    flex-basis: 65%;
+}
+.contact .contact-box .form{
+    display: flex;
+    flex-direction: column;
+}
+.contact .contact-box .form .inputs{
+    display: flex;
+    margin-bottom: 20px;
+    column-gap: 25px;
+}
+.input-name, .input-email{
+    width: 100%;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 12px;
+    padding: 6px 12px;
+    height: 35px;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    transition: .3s;
+}
+.input-name:focus, .input-email:focus{
+    border-color: #66afe9;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%);
+}
+.contact .contact-box form button{
+    float: right;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    color: #f1f1f1;
+    background-color: #333;
+    cursor: pointer;
+    transition: .3s;
+}
+.contact .contact-box form button:hover{
+    border: 1px solid #333;
+    color: #333;
+    background-color: #f1f1f1;
+}
+.contact .contact-box form textarea{
+    resize: none;
+    border: none;
+    outline: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    transition: .3s;
+}
+.contact .contact-box form textarea:focus{
+    border-color: #66afe9;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%);
+}
+.blog{
+    color: #777;
+    margin-bottom: 50px;
+}
+.blog h3{
+    text-align: center;
+    color: #000;
+}
+.blog .blogger{
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+.blog .blogger>div{
+    display: inline;
+    padding: 16px 14px;
+    cursor: pointer;
+}
+.blog .blogger>div:hover{
+    background-color: #ddd;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.blog .blogger>div.active{
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding-bottom: 17px;
+    z-index: 1;
+    background: #fff;
+}
+.blog .content .blogger-content h2{
+    padding: 20px 0;
+    font-weight: 500;
+    font-size: 26px;
+}
+.blog .content .blogger-content{
+    display: none;
+}
+.blog .content .blogger-content.active{
+    display: block;
+}
+footer{
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 50px 0;
+    margin-top: -5px;
+}
+footer p{
+    margin: 15px 0;
+
+}
+footer i{
+    color: #f5f5f5;
+    font-size: 22px;
+    cursor: pointer;
+}
+footer a{
+    color: #f5f5f5;
+    position: relative;
+    margin: 15px 0;
+}
+footer .pop{
+    
+    position: absolute;
+    width: 55px;
+    padding: 2px;
+    border-radius: 5px;
+    color: #f5f5f5;
+    background-color: #000;
+    bottom: 200%;
+    left: 50%;
+    margin-top: 10px;
+    margin-left: -28px;
+    visibility: hidden;
+}
+footer a:hover i{
+    opacity: .2;
+}
+footer a:hover .pop{
+    visibility: visible;
+    position: absolute;
+    width: 55px;
+    padding: 2px;
+    border-radius: 5px;
+    color: #f5f5f5;
+    background-color: #000;
+    bottom: 200%;
+    left: 50%;
+    margin-top: 10px;
+    margin-left: -28px;
+}
+footer .pop::after{
+    content: '';
+    position: absolute;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+}
+.animate__animated.animate__slideInDown {
+    --animate-duration: .5s;
+  }
+  @media all and (max-width: 1624px) {
+    .theBand, .tour-dates, .contact, .blog {
+        margin-left:250px; 
+        margin-right:250px;
+
+        }
+  }
+  @media all and (max-width: 1224px) {
+    .theBand, .tour-dates, .contact, .blog {
+        margin-left:200px; 
+        margin-right:200px;
+        }
+        .caption{
+            top: 76%;
+        }
+  }
+  @media all and (max-width: 992px) {
+    body p{
+        font-size: 16px ;
+    }
+    .contact .contact-box{
+        display: block;
+    }
+    .blog{
+        margin: 50px 0;
+    }
+    .theBand, .tour-dates, .contact, .blog {
+         margin-left:100px; 
+         margin-right:100px;
+    }
+    .caption{
+        top: 70%;
+    }
+    .caption p{
+        font-size: 15px;
+    }
+  }
+  @media all and (max-width: 786px) {
+    .theBand, .tour-dates, .contact, .blog {
+        margin-left:80px; 
+        margin-right:80px;
+    }
+    .caption{
+        top: 65%;
+    }
+    .caption h3{
+        margin: 10px 0 10px 0;
+    }
+    
+    .swiper-button-next:after,.swiper-button-prev:after{
+        font-size: 22px !important; 
+    }
+    .theBand .persons{
+        display: block;
+    }
+    .theBand .persons .person .img-person img{
+        width: 68%;
+    }
+    .tour-dates .locations{
+        display: block;
+        padding: 60px;
+    }
+    .tour-dates .locations .city{
+        margin-bottom: 30px;
+    }
+    .contact .contact-box .form .inputs{
+        display: block;
+    }
+    .contact .contact-box .form .inputs .input-name{
+        margin-bottom: 20px;
+    }
+    header .bar-nav{
+        flex-direction: column;
+        /* padding: 5px; */
+        
+    }
+    header .bar-nav .nav-link .menu-nav{
+        width: 100%;
+        flex-direction: column;
+    }
+    header .bar-nav>i{
+        display: block;
+    }
+    header .bar-nav .nav-link{
+        border-top: 1px solid #ccc;
+        display: none;
+        width: 100%;
+    }
+    header .bar-nav .nav-link.active{
+        display: flex;
+    }
+    .dropdown.open .dropdown-nav{
+        position: static;
+        background-color: transparent;
+    }
+    .dropdown.open {
+        background-color: transparent;
+    }
+    .dropdown-nav>li>a{
+        color: #000;
+        padding: 5px 0;
+    }
+    .dropdown-nav>li:hover>a{
+        color: #f1f1f1;
+    }
+  }
+  @media all and (max-width: 600px) {
+    .caption{
+        display: none;
+    }
+  }
